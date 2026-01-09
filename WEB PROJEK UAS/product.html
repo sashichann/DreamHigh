@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - DreamHigh Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar Component -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">DreamHigh Shop</div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="product.html" class="nav-link active">Produk</a></li>
+            <li><a href="collection.html" class="nav-link">Koleksi</a></li>
+            <li><a href="preorder.html" class="nav-link">Pre-Order</a></li>
+            <li><a href="cart.html" class="nav-link">Keranjang</a></li>
+            <li><a href="login.html" class="nav-link">Login</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Products Page -->
+<section class="products-page">
+    <div class="products-container">
+        <!-- Sidebar Filter -->
+        <aside class="sidebar">
+            <h3>Filter Produk</h3>
+            
+            <div class="filter-section">
+                <h4>Kategori</h4>
+                <div class="filter-options">
+                    <label><input type="checkbox" value="figures" class="category-filter"> Action Figures</label>
+                    <label><input type="checkbox" value="merchandise" class="category-filter"> Merchandise</label>
+                    <label><input type="checkbox" value="collectibles" class="category-filter"> Collectibles</label>
+                    <label><input type="checkbox" value="accessories" class="category-filter"> Accessories</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Harga</h4>
+                <div class="price-range">
+                    <input type="range" id="priceRange" min="0" max="1000000" value="1000000" class="slider">
+                    <p>Max: Rp <span id="priceValue">1.000.000</span></p>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Rating</h4>
+                <div class="filter-options">
+                    <label><input type="checkbox" value="5" class="rating-filter"> ★★★★★ (5 Star)</label>
+                    <label><input type="checkbox" value="4" class="rating-filter"> ★★★★☆ (4+ Star)</label>
+                    <label><input type="checkbox" value="3" class="rating-filter"> ★★★☆☆ (3+ Star)</label>
+                </div>
+            </div>
+
+            <button class="btn" onclick="resetFilters()">Reset Filter</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="products-main">
+            <div class="products-header">
+                <h2>Semua Produk</h2>
+                <div class="sort-options">
+                    <label>Urutkan: </label>
+                    <select id="sortSelect" onchange="sortProducts()">
+                        <option value="newest">Terbaru</option>
+                        <option value="price-low">Harga Terendah</option>
+                        <option value="price-high">Harga Tertinggi</option>
+                        <option value="popular">Paling Populer</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <!-- Products akan dimuat dari JavaScript -->
+            </div>
+        </main>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Tentang Kami</h4>
+            <p>DreamHigh Shop menyediakan koleksi anime figure dan merchandise original berkualitas premium.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Kontak</h4>
+            <p>Email: info@dreamhighshop.com</p>
+            <p>Telepon: 0812-3456-7890</p>
+        </div>
+        <div class="footer-section">
+            <h4>Media Sosial</h4>
+            <p><a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 DreamHigh Shop - Anime Figure & Merchandise Store
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

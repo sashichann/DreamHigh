@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi - DreamHigh Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar Component -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">DreamHigh Shop</div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="product.html" class="nav-link">Produk</a></li>
+            <li><a href="collection.html" class="nav-link active">Koleksi</a></li>
+            <li><a href="preorder.html" class="nav-link">Pre-Order</a></li>
+            <li><a href="cart.html" class="nav-link">Keranjang</a></li>
+            <li><a href="login.html" class="nav-link">Login</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Collection Section -->
+<section class="collections-page">
+    <div class="collections-header">
+        <h1>📚 Koleksi Spesial</h1>
+        <p>Jelajahi koleksi eksklusif dan limited edition kami</p>
+    </div>
+
+    <!-- Featured Collections -->
+    <div class="featured-collections">
+        <h2>Koleksi Unggulan</h2>
+        <div class="collections-grid">
+            <div class="collection-card">
+                <div class="collection-badge">Featured</div>
+                <div class="collection-image">🎌</div>
+                <h3>One Piece Legacy Collection</h3>
+                <p>Koleksi lengkap karakter One Piece dari tahun 2020-2025</p>
+                <div class="collection-stats">
+                    <span>📦 24 Items</span>
+                    <span>⭐ 4.8/5</span>
+                </div>
+                <button class="btn" onclick="viewCollection('one-piece')">Lihat Koleksi</button>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-badge">Best Seller</div>
+                <div class="collection-image">🔥</div>
+                <h3>Naruto Shippuden Collection</h3>
+                <p>Seri lengkap Naruto dengan edisi premium dan eksklusif</p>
+                <div class="collection-stats">
+                    <span>📦 18 Items</span>
+                    <span>⭐ 4.9/5</span>
+                </div>
+                <button class="btn" onclick="viewCollection('naruto')">Lihat Koleksi</button>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-badge">Trending</div>
+                <div class="collection-image">🔮</div>
+                <h3>Jujutsu Kaisen Collection</h3>
+                <p>Koleksi terbaru Jujutsu Kaisen dengan detail yang sangat detail</p>
+                <div class="collection-stats">
+                    <span>📦 15 Items</span>
+                    <span>⭐ 4.7/5</span>
+                </div>
+                <button class="btn" onclick="viewCollection('jjk')">Lihat Koleksi</button>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-badge">New</div>
+                <div class="collection-image">⚡</div>
+                <h3>My Hero Academia Collection</h3>
+                <p>Koleksi MHA terlengkap dengan figurin super detail</p>
+                <div class="collection-stats">
+                    <span>📦 20 Items</span>
+                    <span>⭐ 4.6/5</span>
+                </div>
+                <button class="btn" onclick="viewCollection('mha')">Lihat Koleksi</button>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-badge">Limited</div>
+                <div class="collection-image">👑</div>
+                <h3>Attack on Titan Collection</h3>
+                <p>Edisi terbatas koleksi Attack on Titan yang sangat eksklusif</p>
+                <div class="collection-stats">
+                    <span>📦 12 Items</span>
+                    <span>⭐ 4.9/5</span>
+                </div>
+                <button class="btn" onclick="viewCollection('aot')">Lihat Koleksi</button>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-badge">Premium</div>
+                <div class="collection-image">💎</div>
+                <h3>Demon Slayer Collection</h3>
+                <p>Koleksi premium Demon Slayer dengan material berkualitas tinggi</p>
+                <div class="collection-stats">
+                    <span>📦 16 Items</span>
+                    <span>⭐ 4.8/5</span>
+                </div>
+                <button class="btn" onclick="viewCollection('demon-slayer')">Lihat Koleksi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collection Details Modal -->
+    <div id="collectionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeCollection()">&times;</span>
+            <div id="collectionDetails"></div>
+        </div>
+    </div>
+
+    <!-- Limited Edition Section -->
+    <section class="limited-edition">
+        <h2>✨ Edisi Terbatas</h2>
+        <p>Produk-produk eksklusif dengan jumlah terbatas</p>
+        <div class="limited-grid">
+            <div class="limited-card">
+                <div class="stock-badge">Stock: 5</div>
+                <div class="limited-image">🎯</div>
+                <h3>Luffy King of Pirates - Gold Edition</h3>
+                <p class="limited-price">Rp 2.500.000</p>
+                <p class="limited-desc">Figurin emas 24K dengan detail sempurna</p>
+                <button class="btn" onclick="addToCart('Luffy Gold Edition', 2500000)">Beli Sekarang</button>
+            </div>
+
+            <div class="limited-card">
+                <div class="stock-badge">Stock: 3</div>
+                <div class="limited-image">🔥</div>
+                <h3>Naruto Sage Mode - Premium Figure</h3>
+                <p class="limited-price">Rp 1.999.000</p>
+                <p class="limited-desc">Edisi premium dengan efek pencahayaan LED</p>
+                <button class="btn" onclick="addToCart('Naruto Premium LED', 1999000)">Beli Sekarang</button>
+            </div>
+
+            <div class="limited-card">
+                <div class="stock-badge">Stock: 2</div>
+                <div class="limited-image">💎</div>
+                <h3>Tanjiro Demon Slayer - Platinum Box</h3>
+                <p class="limited-price">Rp 3.200.000</p>
+                <p class="limited-desc">Set lengkap dengan box platinum eksklusif</p>
+                <button class="btn" onclick="addToCart('Tanjiro Platinum Box', 3200000)">Beli Sekarang</button>
+            </div>
+
+            <div class="limited-card">
+                <div class="stock-badge">Stock: 1</div>
+                <div class="limited-image">⚡</div>
+                <h3>Eren Titan Form - Signature Collection</h3>
+                <p class="limited-price">Rp 2.800.000</p>
+                <p class="limited-desc">Koleksi signature dengan sertifikat keaslian</p>
+                <button class="btn" onclick="addToCart('Eren Signature', 2800000)">Beli Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Timeline -->
+    <section class="collection-timeline">
+        <h2>📅 Timeline Koleksi</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2020</div>
+                <div class="timeline-content">
+                    <h4>Koleksi Pertama Kami Diluncurkan</h4>
+                    <p>Memulai dengan 5 produk pilihan dari anime populer</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2021</div>
+                <div class="timeline-content">
+                    <h4>Ekspansi ke 50+ Produk</h4>
+                    <p>Menambah berbagai koleksi dari anime terbaru</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2022</div>
+                <div class="timeline-content">
+                    <h4>Luncuran Limited Edition</h4>
+                    <p>Memperkenalkan edisi terbatas dan eksklusif</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content">
+                    <h4>Kolaborasi Premium</h4>
+                    <p>Partnership dengan brand internasional terkemuka</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2024-2025</div>
+                <div class="timeline-content">
+                    <h4>DreamHigh Shop Expansion</h4>
+                    <p>Mencapai 200+ koleksi dengan kualitas premium</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Tentang Kami</h4>
+            <p>DreamHigh Shop menyediakan koleksi anime figure dan merchandise original berkualitas premium.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Kontak</h4>
+            <p>Email: info@dreamhighshop.com</p>
+            <p>Telepon: 0812-3456-7890</p>
+        </div>
+        <div class="footer-section">
+            <h4>Media Sosial</h4>
+            <p><a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 DreamHigh Shop - Anime Figure & Merchandise Store
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

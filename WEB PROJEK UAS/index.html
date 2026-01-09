@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamHighShop - Anime Figure & Merchandise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar Component -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">DreamHigh Shop</div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="product.html" class="nav-link">Produk</a></li>
+            <li><a href="collection.html" class="nav-link">Koleksi</a></li>
+            <li><a href="preorder.html" class="nav-link">Pre-Order</a></li>
+            <li><a href="cart.html" class="nav-link">Keranjang</a></li>
+            <li><a href="login.html" class="nav-link">Login</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Anime Figure & Merchandise</h1>
+    <p>Original • Premium • Limited Edition</p>
+    <a href="product.html" class="btn">Lihat Koleksi</a>
+</section>
+
+<!-- Categories Section -->
+<section class="categories">
+    <h2>Kategori Produk</h2>
+    <div class="category-grid">
+        <div class="category-card" onclick="filterCategory('figures')">
+            <div class="category-icon">🎯</div>
+            <h3>Action Figures</h3>
+            <p>12 Produk</p>
+        </div>
+        <div class="category-card" onclick="filterCategory('merchandise')">
+            <div class="category-icon">👕</div>
+            <h3>Merchandise</h3>
+            <p>8 Produk</p>
+        </div>
+        <div class="category-card" onclick="filterCategory('collectibles')">
+            <div class="category-icon">💎</div>
+            <h3>Collectibles</h3>
+            <p>6 Produk</p>
+        </div>
+        <div class="category-card" onclick="filterCategory('accessories')">
+            <div class="category-icon">🎀</div>
+            <h3>Accessories</h3>
+            <p>10 Produk</p>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="products" id="products">
+    <h2>Produk Terbaru</h2>
+    <div class="product-grid" id="productGrid">
+        <!-- Products akan dimuat dari JavaScript -->
+    </div>
+</section>
+
+<!-- Recommended / Best Sellers Section -->
+<section class="recommended">
+    <h2>Produk Terlaris</h2>
+    <p class="section-subtitle">Pilihan favorit ribuan pelanggan kami</p>
+    <div class="recommended-grid" id="recommendedGrid">
+        <!-- Best sellers akan dimuat dari JavaScript -->
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Tentang Kami</h4>
+            <p>DreamHigh Shop menyediakan koleksi anime figure dan merchandise original berkualitas premium.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Kontak</h4>
+            <p>Email: info@dreamhighshop.com</p>
+            <p>Telepon: 0812-3456-7890</p>
+        </div>
+        <div class="footer-section">
+            <h4>Media Sosial</h4>
+            <p><a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 DreamHigh Shop - Anime Figure & Merchandise Store
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

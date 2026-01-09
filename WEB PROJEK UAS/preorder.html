@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Order - DreamHigh Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar Component -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">DreamHigh Shop</div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="product.html" class="nav-link">Produk</a></li>
+            <li><a href="collection.html" class="nav-link">Koleksi</a></li>
+            <li><a href="preorder.html" class="nav-link active">Pre-Order</a></li>
+            <li><a href="cart.html" class="nav-link">Keranjang</a></li>
+            <li><a href="login.html" class="nav-link">Login</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Pre-Order Section -->
+<section class="preorder-page">
+    <div class="preorder-header">
+        <h1>🚀 Pre-Order Eksklusif</h1>
+        <p>Dapatkan produk terbaru sebelum orang lain dengan harga pre-order spesial</p>
+    </div>
+
+    <!-- Pre-Order Info -->
+    <div class="preorder-info">
+        <div class="info-card">
+            <div class="info-icon">📦</div>
+            <h3>Gratis Ongkir</h3>
+            <p>Untuk semua pre-order minimal Rp 500.000</p>
+        </div>
+        <div class="info-card">
+            <div class="info-icon">💳</div>
+            <h3>Cicilan 0%</h3>
+            <p>Cicilan 3-6 bulan tanpa bunga tersedia</p>
+        </div>
+        <div class="info-card">
+            <div class="info-icon">🎁</div>
+            <h3>Bonus Eksklusif</h3>
+            <p>Dapatkan merchandise eksklusif pre-order</p>
+        </div>
+        <div class="info-card">
+            <div class="info-icon">⏰</div>
+            <h3>Early Bird Discount</h3>
+            <p>Diskon tambahan 15% untuk 50 pembeli pertama</p>
+        </div>
+    </div>
+
+    <!-- Coming Soon Products -->
+    <section class="coming-soon">
+        <h2>⚡ Segera Datang</h2>
+        <div class="preorder-grid">
+            <div class="preorder-card">
+                <div class="preorder-badge early-bird">Early Bird -15%</div>
+                <div class="countdown" id="countdown1">
+                    <span class="count-item"><span class="count-number">15</span> <span class="count-label">Hari</span></span>
+                    <span class="count-item"><span class="count-number">08</span> <span class="count-label">Jam</span></span>
+                    <span class="count-item"><span class="count-number">42</span> <span class="count-label">Menit</span></span>
+                </div>
+                <div class="preorder-image">👑</div>
+                <h3>Luffy Gear 5 - Mythical Figure</h3>
+                <p class="preorder-desc">Figurin super detail dari chapter terbaru One Piece</p>
+                <div class="preorder-details">
+                    <p><strong>Tanggal Rilis:</strong> 15 Feb 2026</p>
+                    <p><strong>Pre-Order Harga:</strong> <span style="color: #ff6b6b; font-weight: bold;">Rp 1.275.000</span> <span style="text-decoration: line-through; color: #999;">Rp 1.500.000</span></p>
+                    <p><strong>Bonus:</strong> Poster eksklusif + Keychain</p>
+                </div>
+                <button class="btn" onclick="preorderItem('Luffy Gear 5', 1275000, '15 Feb 2026')">Pre-Order Sekarang</button>
+            </div>
+
+            <div class="preorder-card">
+                <div class="preorder-badge hot">Limited Stock</div>
+                <div class="countdown" id="countdown2">
+                    <span class="count-item"><span class="count-number">22</span> <span class="count-label">Hari</span></span>
+                    <span class="count-item"><span class="count-number">14</span> <span class="count-label">Jam</span></span>
+                    <span class="count-item"><span class="count-number">56</span> <span class="count-label">Menit</span></span>
+                </div>
+                <div class="preorder-image">⚡</div>
+                <h3>Sukuna Jujutsu Kaisen - True Form</h3>
+                <p class="preorder-desc">Figurin eksklusif Ryomen Sukuna full power mode</p>
+                <div class="preorder-details">
+                    <p><strong>Tanggal Rilis:</strong> 22 Feb 2026</p>
+                    <p><strong>Pre-Order Harga:</strong> <span style="color: #ff6b6b; font-weight: bold;">Rp 1.400.000</span> <span style="text-decoration: line-through; color: #999;">Rp 1.750.000</span></p>
+                    <p><strong>Bonus:</strong> Limited box set + Stand display</p>
+                </div>
+                <button class="btn" onclick="preorderItem('Sukuna True Form', 1400000, '22 Feb 2026')">Pre-Order Sekarang</button>
+            </div>
+
+            <div class="preorder-card">
+                <div class="preorder-badge premium">Premium Edition</div>
+                <div class="countdown" id="countdown3">
+                    <span class="count-item"><span class="count-number">30</span> <span class="count-label">Hari</span></span>
+                    <span class="count-item"><span class="count-number">10</span> <span class="count-label">Jam</span></span>
+                    <span class="count-item"><span class="count-number">15</span> <span class="count-label">Menit</span></span>
+                </div>
+                <div class="preorder-image">💎</div>
+                <h3>Deku Plus Ultra - Ultimate Hero</h3>
+                <p class="preorder-desc">Figurin premium My Hero Academia dengan efek LED</p>
+                <div class="preorder-details">
+                    <p><strong>Tanggal Rilis:</strong> 01 Mar 2026</p>
+                    <p><strong>Pre-Order Harga:</strong> <span style="color: #ff6b6b; font-weight: bold;">Rp 1.799.000</span> <span style="text-decoration: line-through; color: #999;">Rp 2.200.000</span></p>
+                    <p><strong>Bonus:</strong> Premium LED base + Certificate</p>
+                </div>
+                <button class="btn" onclick="preorderItem('Deku Plus Ultra', 1799000, '01 Mar 2026')">Pre-Order Sekarang</button>
+            </div>
+
+            <div class="preorder-card">
+                <div class="preorder-badge hot">Trending</div>
+                <div class="countdown" id="countdown4">
+                    <span class="count-item"><span class="count-number">18</span> <span class="count-label">Hari</span></span>
+                    <span class="count-item"><span class="count-number">06</span> <span class="count-label">Jam</span></span>
+                    <span class="count-item"><span class="count-number">30</span> <span class="count-label">Menit</span></span>
+                </div>
+                <div class="preorder-image">🔥</div>
+                <h3>Tanjiro Demon Slayer - Hinokami</h3>
+                <p class="preorder-desc">Figurin detail tinggi dengan efek flame 3D</p>
+                <div class="preorder-details">
+                    <p><strong>Tanggal Rilis:</strong> 20 Feb 2026</p>
+                    <p><strong>Pre-Order Harga:</strong> <span style="color: #ff6b6b; font-weight: bold;">Rp 1.199.000</span> <span style="text-decoration: line-through; color: #999;">Rp 1.450.000</span></p>
+                    <p><strong>Bonus:</strong> Art book + Trading cards</p>
+                </div>
+                <button class="btn" onclick="preorderItem('Tanjiro Hinokami', 1199000, '20 Feb 2026')">Pre-Order Sekarang</button>
+            </div>
+
+            <div class="preorder-card">
+                <div class="preorder-badge early-bird">Early Bird -20%</div>
+                <div class="countdown" id="countdown5">
+                    <span class="count-item"><span class="count-number">25</span> <span class="count-label">Hari</span></span>
+                    <span class="count-item"><span class="count-number">12</span> <span class="count-label">Jam</span></span>
+                    <span class="count-item"><span class="count-number">20</span> <span class="count-label">Menit</span></span>
+                </div>
+                <div class="preorder-image">👹</div>
+                <h3>Eren Colossal Titan - Deluxe</h3>
+                <p class="preorder-desc">Figurin raksasa Attack on Titan edisi deluxe</p>
+                <div class="preorder-details">
+                    <p><strong>Tanggal Rilis:</strong> 25 Feb 2026</p>
+                    <p><strong>Pre-Order Harga:</strong> <span style="color: #ff6b6b; font-weight: bold;">Rp 2.000.000</span> <span style="text-decoration: line-through; color: #999;">Rp 2.500.000</span></p>
+                    <p><strong>Bonus:</strong> Deluxe base + Diorama set</p>
+                </div>
+                <button class="btn" onclick="preorderItem('Eren Colossal', 2000000, '25 Feb 2026')">Pre-Order Sekarang</button>
+            </div>
+
+            <div class="preorder-card">
+                <div class="preorder-badge premium">Signature Collection</div>
+                <div class="countdown" id="countdown6">
+                    <span class="count-item"><span class="count-number">08</span> <span class="count-label">Hari</span></span>
+                    <span class="count-item"><span class="count-number">16</span> <span class="count-label">Jam</span></span>
+                    <span class="count-item"><span class="count-number">45</span> <span class="count-label">Menit</span></span>
+                </div>
+                <div class="preorder-image">🎌</div>
+                <h3>Naruto Kurama Mode - Collector's</h3>
+                <p class="preorder-desc">Figurin koleksi Naruto dengan Kurama bersatu</p>
+                <div class="preorder-details">
+                    <p><strong>Tanggal Rilis:</strong> 10 Feb 2026</p>
+                    <p><strong>Pre-Order Harga:</strong> <span style="color: #ff6b6b; font-weight: bold;">Rp 1.600.000</span> <span style="text-decoration: line-through; color: #999;">Rp 2.000.000</span></p>
+                    <p><strong>Bonus:</strong> Collector's box + Number tag</p>
+                </div>
+                <button class="btn" onclick="preorderItem('Naruto Kurama', 1600000, '10 Feb 2026')">Pre-Order Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Order FAQ -->
+    <section class="preorder-faq">
+        <h2>❓ Pertanyaan Umum</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>Apa itu Pre-Order?</h3>
+                <p>Pre-order adalah pemesanan produk sebelum stok resmi tersedia. Anda mendapatkan harga spesial dan bonus eksklusif.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Berapa lama waktu pengiriman?</h3>
+                <p>Pengiriman dilakukan sesuai tanggal rilis resmi dari distributor. Informasi lengkap akan diberikan saat checkout.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Apakah bisa dibatalkan?</h3>
+                <p>Pre-order dapat dibatalkan maksimal 7 hari sebelum tanggal rilis dengan pengembalian dana penuh.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Bagaimana jaminan keaslian?</h3>
+                <p>Semua produk 100% original dengan sertifikat keaslian dan garansi resmi dari distributor resmi.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Apakah ada biaya tambahan?</h3>
+                <p>Tidak ada biaya tersembunyi. Harga yang tertera adalah harga final termasuk semua bonus.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Bagaimana dengan garansi?</h3>
+                <p>Semua pre-order mendapat garansi produk 1 tahun dan garansi kepuasan 100% dari DreamHigh Shop.</p>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Tentang Kami</h4>
+            <p>DreamHigh Shop menyediakan koleksi anime figure dan merchandise original berkualitas premium.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Kontak</h4>
+            <p>Email: info@dreamhighshop.com</p>
+            <p>Telepon: 0812-3456-7890</p>
+        </div>
+        <div class="footer-section">
+            <h4>Media Sosial</h4>
+            <p><a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 DreamHigh Shop - Anime Figure & Merchandise Store
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

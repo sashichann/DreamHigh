@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang - DreamHigh Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar Component -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">🎌 DreamHigh Shop</div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="product.html" class="nav-link">Produk</a></li>
+            <li><a href="cart.html" class="nav-link active">Keranjang</a></li>
+            <li><a href="login.html" class="nav-link">Login</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Cart Section -->
+<section class="cart-section">
+    <div class="cart-container">
+        <h2>🛒 Keranjang Belanja</h2>
+
+        <!-- Cart Items -->
+        <div class="cart-content">
+            <div class="cart-items-wrapper">
+                <ul class="cart-items" id="cartItems">
+                    <!-- Items akan dimuat dari JavaScript -->
+                </ul>
+            </div>
+
+            <!-- Cart Summary -->
+            <aside class="cart-summary">
+                <h3>Ringkasan Pesanan</h3>
+                
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">Rp 0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Diskon:</span>
+                    <span id="discount">Rp 0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Ongkir:</span>
+                    <select id="shippingOption" onchange="updateShipping()">
+                        <option value="0">Gratis (Standard)</option>
+                        <option value="10000">Rp 10.000 (Express)</option>
+                        <option value="25000">Rp 25.000 (Same Day)</option>
+                    </select>
+                </div>
+
+                <div class="summary-row">
+                    <span>Pajak (10%):</span>
+                    <span id="tax">Rp 0</span>
+                </div>
+
+                <hr>
+
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">Rp 0</span>
+                </div>
+
+                <div class="promo-code">
+                    <input type="text" id="promoCode" placeholder="Kode Promo" maxlength="10">
+                    <button class="btn" onclick="applyPromo()">Terapkan</button>
+                </div>
+
+                <button class="btn btn-primary" onclick="checkout()" style="width: 100%; margin-top: 20px;">
+                    Lanjut ke Pembayaran
+                </button>
+
+                <a href="product.html" class="btn btn-secondary" style="width: 100%; text-align: center; margin-top: 10px;">
+                    Lanjut Belanja
+                </a>
+            </aside>
+        </div>
+
+        <!-- Empty Cart Message -->
+        <div id="emptyCart" class="empty-cart" style="display: none;">
+            <div class="empty-cart-content">
+                <h3>Keranjang Anda Kosong</h3>
+                <p>Mulai berbelanja dan temukan produk favorit Anda!</p>
+                <a href="product.html" class="btn">Lihat Produk</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Tentang Kami</h4>
+            <p>DreamHigh Shop menyediakan koleksi anime figure dan merchandise original berkualitas premium.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Kontak</h4>
+            <p>Email: info@dreamhighshop.com</p>
+            <p>Telepon: 0812-3456-7890</p>
+        </div>
+        <div class="footer-section">
+            <h4>Media Sosial</h4>
+            <p><a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 DreamHigh Shop - Anime Figure & Merchandise Store
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
